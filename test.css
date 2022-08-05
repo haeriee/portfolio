@@ -667,6 +667,13 @@ header {
     left: 50%;
     top: 50%;
     display: flex;
+
+    width: 1183px;
+    height: 665px;
+    padding: 39px;
+    border: 2px solid white;
+    border-radius: 30px;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fafe13, 0 0 0.8rem #fafe13, 0 0 2.8rem #fafe13, inset 0 0 1.3rem #fafe13;
 }
 
 .show {
@@ -1355,22 +1362,8 @@ figure:hover .photo {
     font-size: 128px;
 }
 
-.light {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    width: 200px;
-   height: 200px;
-   background: white;
-   filter: blur(20px);
-}
-
 .Information {
     width: 1230px;
-    /* height: 100%; */
     display: flex;
     padding-top: 200px;
     justify-content: space-between;
@@ -1441,10 +1434,30 @@ input[type="checkbox"]:checked ~ div {
     }
 }
 
+.light {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    background: white;
+    
+    filter: blur(20px);
+    opacity: 0.5;
+}
+
 .privacy {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.privacy > div {
+    position: absolute;
 }
 
 .on-mouse-view {
@@ -1456,6 +1469,8 @@ input[type="checkbox"]:checked ~ div {
     color: #BB29AC;
     position: absolute;
     margin-top: 90px;
+    z-index: 9999;
+    clip-path: inset(50% 50%);
 }
 
 
@@ -1483,7 +1498,7 @@ input[type="checkbox"]:checked ~ div {
 
 }
 
-@media(max-width: 900px) {
+@media(max-width: 1240px) {
 
     .show-container {
         display: none;
@@ -1497,28 +1512,28 @@ input[type="checkbox"]:checked ~ div {
         transform: translate(-50%,-50%);
     }
 
-    .introduce {
-        top: -36%;
-        left: 54%;
-        position: absolute;
-        font-family: 'Inria Serif';
-        font-weight: bold;
-        font-size: 32px;
-        line-height: 38px;
-        color: #727171;
-    }
-
     .about {
         height: 1146px;
     }
 
     .about-text {
-        left: 113px;
+        margin-left: -64px;
     }
 
-    .heart {
-        left: -74px;
+    .about-right {
+        width: 368px;
+        padding: 34px;
+        height: 520px;
     }
+
+    .change {
+        width: 273px;
+        height: 154px;
+    }
+
+
+
+
 
     .section {
         display: flex;

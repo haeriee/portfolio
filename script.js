@@ -24,23 +24,27 @@ window.addEventListener('scroll', function(){
     }
 });
 
-const blink = document.querySelector(".light");
-
-document.addEventListener("mousemove", (e) => { 
-
-    const mouseX = e.clientX ;
-
-    const mouseY = e.clientY + window.scrollY;
-
-    light.style.left = mouseX + 'px';
-
-    light.style.top = mouseY + 'px';
-});
+const lightSection = document.getElementById('five');
 
 const light = document.querySelector('.light');
-const onMouseView = document.querySelector('.on-mouse-view');
+const onMouseView = document.getElementsByClassName('on-mouse-view');
 
-window.addEventListener('monsemove', (e) => {
-    onMouseView.style.clipPath = `ellipse(100px 100px at ${e. clientX-onMouseView.getBoundingClientRect().left}px ${e.clientY=window.screenY-onMouseView.getBoundingClientRect().top}px)`
-    console.log(onMouseView.getBoundingClientRect().top)
+lightSection.addEventListener('mousemove', (e) => {
+    console.log('작동중');
+    light.style.left = `${e.clientX}px`;
+    light.style.top = `${e.clientY+window.scrollY}px`
+
+    for(let i = 0 ; i < onMouseView.length; i++){
+        onMouseView[i].style.clipPath = `ellipse(100px 100px at ${e.clientX-onMouseView[i].getBoundingClientRect().left}px ${e.clientY-onMouseView[i].getBoundingClientRect().top}px)`
+    }
+
 });
+
+lightSection.addEventListener('mouseenter', ()=>{
+    light.style.display= `block`
+
+})
+
+lightSection.addEventListener('mouseleave', ()=>{
+    light.style.display= `none`
+})
