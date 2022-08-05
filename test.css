@@ -15,11 +15,7 @@ body {
     overflow-x: hidden;
 }
 
-#home, #skills, #portfolio, #contact, .footer{
-    background: url(img/unsplash_mvLyHPRGLCs.png);
-}
-
-#about {
+.home, .about, .skills, .portfolio, .contact{
     background: url(img/unsplash_mvLyHPRGLCs.png);
 }
 
@@ -211,8 +207,8 @@ header {
 }
 
 .introduce {
-    top: -19%;
-    left: 66%;
+    top: -11%;
+    left: 62%;
     position: absolute;
     font-family: 'Inria Serif';
     font-weight: bold;
@@ -223,7 +219,7 @@ header {
 
 /*---------------------------------------*/
 
-#home {
+.home {
     width: 100%;
     height: 974px;
     display: flex;
@@ -244,7 +240,13 @@ header {
     font-size: 96px;
     line-height: 156px;
     text-align: center;
-    width: 100%;
+    /* width: 100%; */
+    width: 790px;
+    height: 555px;
+    padding: 39px;
+    border: 2px solid white;
+    border-radius: 30px;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fafe13, 0 0 0.8rem #fafe13, 0 0 2.8rem #fafe13, inset 0 0 1.3rem #fafe13;
 }
 
 .blink1 {
@@ -339,7 +341,7 @@ header {
 
 /*----------------------------------------*/
 
-#about {
+.about {
     width: 100%;
     height: 974px;
     margin: 0 auto;
@@ -353,8 +355,8 @@ header {
 
 .heart {
     position: absolute;
-    top: 108px;
-    left: -194px;
+    top: -45px;
+    left: -253px;
 }
 
 .heart>img{
@@ -371,7 +373,8 @@ header {
     font-size: 128px;
     line-height: 208px;
     position: absolute;
-    margin-top: 200px;
+    margin-top: 40px;
+    margin-left: -66px;
 }
 
 .about-text>p {
@@ -397,65 +400,124 @@ header {
 .about-container {
     width: 100%;
     display: flex;
-    padding-top: 413px;
+    padding-top: 224px;
 }
 
 .about-right {
     display: flex;
     flex-direction: column;
     margin-left: 54px;
+    border: 2px solid white;
+    padding: 105px;
+    height: 656px;
+    border-radius: 40px;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #f613fe, 0 0 0.8rem #f613fe, 0 0 2.8rem #f613fe, inset 0 0 1.3rem #f613fe;
 }
 
-
-.card {
-    width: 400px;
-    height: 400px;
-    transform: translate(0%, 0%);
-    border: 1px solid #000;
-    border-radius: 60px;
-    overflow: hidden;
-}
-
-.box1,
-.box2{
-    top: 0;
-    left: 0;
-    position: absolute;
-}
-
-.gray {
-    filter: grayscale(100%);
-}
-
-.color {
-    width: 0;
-    transition: 3s;
-    overflow: hidden;
-}
-
-.card:hover .color {
-    width: 100%;
-}
 
 
 .introduce-text{
     font-family: 'Inria Serif';
     font-size: 48px;
     line-height: 58px;
-    color: #3750FF;
+    position: relative;
     white-space: nowrap;
-
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px  #bc13fe, 0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe, 0 0 151px #bc13fe;
 }
-
 
 .explanation {
     margin-top: 30px;
     font-family: 'Inria Serif';
     font-size: 16px;
     line-height: 19px;
-    color: #37C8FF;
+    color: #2bacdf;
 }
 
+
+.pr-box{
+    width: 100%;
+    margin: 0 auto;
+}
+  
+.change{
+    position: relative;
+    width: 350px;
+    height: 200px;
+    margin: 20px;
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px  #bc13fe, 0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe, 0 0 151px #bc13fe;
+    font-family: 'Inria Serif';
+    box-shadow: 0 15px 60px rgba(0,0,0, .5);
+    border-radius: 15px;
+}
+
+.change .face{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.change .face.face1{
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.change .face.face2{
+    background: #111;
+    transition: 0.5s;
+}
+
+.change:nth-child(1) .face.face2{
+    background: linear-gradient(45deg, #3604ac, #a3205d);
+    border-radius: 15px;
+}
+
+.change:nth-child(2) .face.face2{
+    background: linear-gradient(45deg, #708b01, #045882);
+    border-radius: 15px;
+}
+
+.change:nth-child(3) .face.face2{
+    background: linear-gradient(45deg, #821036, #847a1e);
+    border-radius: 15px;
+}
+
+.change:hover .face.face2{
+    height: 60px;
+    border-radius: 0 0 15px 15px;
+}
+
+.change .face.face2:before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255, 0.1);
+    border-radius: 15px 0 0 15px;
+}
+
+.change .face.face2 h2{
+    margin: 0;
+    padding: 0;
+    font-family: 'Kotta One';
+    font-size: 48px;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+}
+
+.change:hover .face.face2 h2{
+    font-size: 18px;
+    color: #030303;
+}
 
 .about-btn {
     position: relative;
@@ -576,10 +638,10 @@ header {
 
 /*-----------------------------------------------------*/
 
-#skills {
+.skills {
     width: 100%;
     height: 974px;
-    padding-top: 300px;
+    padding-top: 235px;
 }
 
 .skills-text {
@@ -684,7 +746,7 @@ header {
 
 /*------------------------------------------------------*/
 
-#portfolio {
+.portfolio {
     width: 100%;
     height: 974px;
 }
@@ -1275,10 +1337,9 @@ figure:hover .photo {
 
 /*------------------------------------------------*/
 
-#contact {
+.contact {
     width: 100%;
     height: 974px;
-    clip-path: ;
 }
 
 .contact-text {
@@ -1302,9 +1363,9 @@ figure:hover .photo {
     transform: translate(-50%, -50%);
     z-index: 5;
     width: 200px;
-	height: 200px;
-	background: white;
-	filter: blur(20px);
+   height: 200px;
+   background: white;
+   filter: blur(20px);
 }
 
 .Information {
@@ -1394,13 +1455,14 @@ input[type="checkbox"]:checked ~ div {
     align-items: center;
     color: #BB29AC;
     position: absolute;
+    margin-top: 90px;
 }
 
 
 .footer {
     text-align: center;
     width: 100%;
-    padding-top: 150px;
+    padding-top: 200px;
     display: flex;
     justify-content: center;
 }
@@ -1446,7 +1508,7 @@ input[type="checkbox"]:checked ~ div {
         color: #727171;
     }
 
-    #about {
+    .about {
         height: 1146px;
     }
 
@@ -1466,7 +1528,7 @@ input[type="checkbox"]:checked ~ div {
     }
 
 
-    #skills {
+    .skills {
         width: 100%;
         height: 1500px;
         margin: 0 auto;
@@ -1519,7 +1581,7 @@ input[type="checkbox"]:checked ~ div {
         right: 53px;
     }
 
-    #portfolio {
+    .portfolio {
         height: 963px;
     }
 
@@ -1584,9 +1646,8 @@ input[type="checkbox"]:checked ~ div {
     }
 
     .section {
-        display: flex; 
+        display: flex;
         padding-left: 96px;
-        flex-direction: column;
         width: 100%;
     }
 
@@ -1600,16 +1661,15 @@ input[type="checkbox"]:checked ~ div {
         font-family: 'Inria Serif';
         font-size: 36px;
         line-height: 58px;
-        color: #3750FF;
         white-space: nowrap;
     }
 
     .main-text {
-        width: 1000px;
+        width: 100%;
     }
 
     .heart {
-        top: 154px;
+        top: 120px;
         left: -160px;
     }
 
@@ -1618,24 +1678,33 @@ input[type="checkbox"]:checked ~ div {
         height: 262px;
     }
 
-    #about {
+    .about {
         width: 100%;
-        height: 1500px;
+        height: 2000px;
     }
 
     .about-text {
-        left: -47px;
+        width: 474px;
+        font-size: 128px;
+        line-height: 208px;
+        position: absolute;
+        margin-top: 170px;
+        margin-left: -150px;
     }
 
     .about-container {
         width: 100%;
         display: flex;
-        padding-top: 5px;
+        margin-top: 164px;
         flex-direction: column;
     }
 
     .about-right {
-        margin-left: 0;
+        margin-left: -16px;
+        padding: 59px;
+        height: 576px;
+        width: 417px;
+        margin-top: 50px;
     }
 
     .straight{
@@ -1643,11 +1712,11 @@ input[type="checkbox"]:checked ~ div {
     }
 
     .about-btn {
-        width: 334px;
+        width: 286px;
         left: 0;
     }
 
-    #skills {
+    .skills {
         height: 1500px;
     }
 
@@ -1680,9 +1749,14 @@ input[type="checkbox"]:checked ~ div {
         padding-top: 110px;
     }
 
-    #portfolio {
+    .portfolio {
         width: 100%;
         height: 1640px;
+    }
+
+    figure {
+        width: 392px;
+        margin-left: 72px;
     }
 
     .lush-btn, .web {

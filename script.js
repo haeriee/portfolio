@@ -13,7 +13,7 @@ for(let i = 0 ; i < neon.length ; i ++){
     `
 }
 
-const skillDiv = document.querySelector('#skills');
+const skillDiv = document.querySelector('.skills');
 const barInner = document.getElementsByClassName('bar-inner');
 
 window.addEventListener('scroll', function(){
